@@ -1,6 +1,10 @@
 import classes from "./MealsSummary.module.css";
+import { useContext } from "react";
+import CartContext from "../../store/cart-context";
 
 const MealsSummary = () => {
+  const cartCtx = useContext(CartContext);
+  console.log("summary", cartCtx);
   return (
     <section className={classes.summary}>
       <h2>Delicious Food, Delivered To You</h2>
